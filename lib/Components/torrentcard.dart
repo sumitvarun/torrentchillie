@@ -15,7 +15,7 @@ class TorrentCard extends StatelessWidget {
                 child: Torrentcardbutton(
                     image:
                         'https://upload.wikimedia.org/wikipedia/en/9/9b/Kickasstorrentslogo.png',
-                    color: Colors.amber,
+                    color: Color(0xffE9E8E7),
                     title: 'Kickass Torrent',
                     textColor: Colors.black),
               ),
@@ -23,7 +23,7 @@ class TorrentCard extends StatelessWidget {
                 child: Torrentcardbutton(
                     image:
                         'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/1337X_logo.svg/1280px-1337X_logo.svg.png',
-                    color: Colors.orange,
+                    color: Color(0xffE9E8E7),
                     title: '1337x',
                     textColor: Colors.black),
               ),
@@ -31,7 +31,7 @@ class TorrentCard extends StatelessWidget {
                 child: Torrentcardbutton(
                     image:
                         'https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/The_Pirate_Bay_logo.svg/800px-The_Pirate_Bay_logo.svg.png',
-                    color: Colors.orange,
+                    color: Color(0xffE9E8E7),
                     title: 'The Pirate Bay',
                     textColor: Colors.black),
               ),
@@ -39,7 +39,7 @@ class TorrentCard extends StatelessWidget {
                 child: Torrentcardbutton(
                     image:
                         'https://img.icons8.com/color/48/000000/utorrent.png',
-                    color: Colors.orange,
+                    color: Color(0xffE9E8E7),
                     title: 'Torrentz2',
                     textColor: Colors.black),
               ),
@@ -70,7 +70,7 @@ class Torrentcardbutton extends StatelessWidget {
       margin: const EdgeInsets.all(10.0),
       height: 100,
       decoration: BoxDecoration(
-          color: color, borderRadius: BorderRadius.circular(15.0)),
+          color: color, borderRadius: BorderRadius.circular(50.0)),
       child: Column(
         children: <Widget>[
           Expanded(child: Image(image: NetworkImage(image))),
