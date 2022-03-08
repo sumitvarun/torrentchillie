@@ -57,7 +57,8 @@ class Torrentcardbutton extends StatelessWidget {
           color: color, borderRadius: BorderRadius.circular(15.0)),
       child: Column(
         children: <Widget>[
-          Expanded(child: Image(image: NetworkImage(image))),
+          Expanded(
+              child: Image(fit: BoxFit.contain, image: NetworkImage(image))),
           Expanded(
             child: Text(
               title,
