@@ -43,7 +43,7 @@ class _HomePageState extends State<HomePage> {
                     },
                     child: const Icon(
                       Icons.home_filled,
-                      color: Colors.black,
+                      color: Color(0xff43FE02),
                     ),
                   ),
                   trailing: CupertinoButton(
@@ -51,7 +51,7 @@ class _HomePageState extends State<HomePage> {
                     onPressed: () {},
                     child: const Icon(
                       Icons.search,
-                      color: Colors.black,
+                      color: Color(0xff43FE02),
                     ),
                   ),
 

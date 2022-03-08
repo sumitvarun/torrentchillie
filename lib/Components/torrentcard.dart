@@ -7,45 +7,51 @@ class TorrentCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      child: Column(
-        children: <Widget>[
-          Row(
-            children: const <Widget>[
-              Expanded(
-                child: Torrentcardbutton(
-                    image:
-                        'https://upload.wikimedia.org/wikipedia/en/9/9b/Kickasstorrentslogo.png',
-                    color: Color(0xffE9E8E7),
-                    title: 'Kickass Torrent',
-                    textColor: Colors.black),
-              ),
-              Expanded(
-                child: Torrentcardbutton(
-                    image:
-                        'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/1337X_logo.svg/1280px-1337X_logo.svg.png',
-                    color: Color(0xffE9E8E7),
-                    title: '1337x',
-                    textColor: Colors.black),
-              ),
-              Expanded(
-                child: Torrentcardbutton(
-                    image:
-                        'https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/The_Pirate_Bay_logo.svg/800px-The_Pirate_Bay_logo.svg.png',
-                    color: Color(0xffE9E8E7),
-                    title: 'The Pirate Bay',
-                    textColor: Colors.black),
-              ),
-              Expanded(
-                child: Torrentcardbutton(
-                    image:
-                        'https://img.icons8.com/color/48/000000/utorrent.png',
-                    color: Color(0xffE9E8E7),
-                    title: 'Torrentz2',
-                    textColor: Colors.black),
-              ),
-            ],
-          )
-        ],
+      child: Container(
+        margin: const EdgeInsets.all(10.0),
+        decoration: BoxDecoration(
+            color: const Color(0xff515A5A),
+            borderRadius: BorderRadius.circular(40.0)),
+        child: Column(
+          children: <Widget>[
+            Row(
+              children: const <Widget>[
+                Expanded(
+                  child: Torrentcardbutton(
+                      image:
+                          'https://upload.wikimedia.org/wikipedia/en/9/9b/Kickasstorrentslogo.png',
+                      color: Color(0xffE9E8E7),
+                      title: 'Kickass Torrent',
+                      textColor: Colors.black),
+                ),
+                Expanded(
+                  child: Torrentcardbutton(
+                      image:
+                          'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/1337X_logo.svg/1280px-1337X_logo.svg.png',
+                      color: Color(0xffE9E8E7),
+                      title: '1337x',
+                      textColor: Colors.black),
+                ),
+                Expanded(
+                  child: Torrentcardbutton(
+                      image:
+                          'https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/The_Pirate_Bay_logo.svg/800px-The_Pirate_Bay_logo.svg.png',
+                      color: Color(0xffE9E8E7),
+                      title: 'The Pirate Bay',
+                      textColor: Colors.black),
+                ),
+                Expanded(
+                  child: Torrentcardbutton(
+                      image:
+                          'https://img.icons8.com/color/48/000000/utorrent.png',
+                      color: Color(0xffE9E8E7),
+                      title: 'Torrentz2',
+                      textColor: Colors.black),
+                ),
+              ],
+            )
+          ],
+        ),
       ),
     );
   }
