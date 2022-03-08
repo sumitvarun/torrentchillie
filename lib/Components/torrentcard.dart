@@ -27,6 +27,22 @@ class TorrentCard extends StatelessWidget {
                     title: '1337x',
                     textColor: Colors.black),
               ),
+              Expanded(
+                child: Torrentcardbutton(
+                    image:
+                        'https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/The_Pirate_Bay_logo.svg/800px-The_Pirate_Bay_logo.svg.png',
+                    color: Colors.orange,
+                    title: 'The Pirate Bay',
+                    textColor: Colors.black),
+              ),
+              Expanded(
+                child: Torrentcardbutton(
+                    image:
+                        'https://img.icons8.com/color/48/000000/utorrent.png',
+                    color: Colors.orange,
+                    title: 'Torrentz2',
+                    textColor: Colors.black),
+              ),
             ],
           )
         ],
@@ -57,15 +73,14 @@ class Torrentcardbutton extends StatelessWidget {
           color: color, borderRadius: BorderRadius.circular(15.0)),
       child: Column(
         children: <Widget>[
-          Expanded(
-              child: Image(fit: BoxFit.contain, image: NetworkImage(image))),
+          Expanded(child: Image(image: NetworkImage(image))),
           Expanded(
             child: Text(
               title,
               style: GoogleFonts.sourceSansPro(
                 color: textColor,
-                fontWeight: FontWeight.w700,
-                fontSize: 20.0,
+                fontWeight: FontWeight.w500,
+                fontSize: 15.0,
               ),
             ),
           )
