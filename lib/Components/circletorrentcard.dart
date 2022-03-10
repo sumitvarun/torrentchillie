@@ -26,6 +26,14 @@ class CircleTorrentCard extends StatelessWidget {
                     ctitle: 'Trending',
                     cimage:
                         'https://img.icons8.com/color/480/000000/summer--v2.gif'),
+              ),
+              Expanded(
+                child: Circletorrbutton(
+                    ccolor: Colors.white,
+                    ctextColor: Colors.black,
+                    ctitle: 'Movies',
+                    cimage:
+                        'https://img.icons8.com/ultraviolet/480/000000/film-reel--v2.gif'),
               )
             ],
           ),
