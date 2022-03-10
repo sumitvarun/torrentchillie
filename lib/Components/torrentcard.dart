@@ -49,6 +49,26 @@ class TorrentCard extends StatelessWidget {
                       textColor: Colors.black),
                 ),
               ],
+            ),
+            Row(
+              children: const <Widget>[
+                Expanded(
+                  child: Torrentcardbutton(
+                      image:
+                          'https://upload.wikimedia.org/wikipedia/commons/0/0d/RARBG_Logo.png',
+                      color: Color(0xffE9E8E7),
+                      title: 'RARBG',
+                      textColor: Colors.black),
+                ),
+                Expanded(
+                  child: Torrentcardbutton(
+                      image:
+                          'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Logo-YTS.svg/1280px-Logo-YTS.svg.png',
+                      color: Color(0xffE9E8E7),
+                      title: 'YTS',
+                      textColor: Colors.black),
+                ),
+              ],
             )
           ],
         ),

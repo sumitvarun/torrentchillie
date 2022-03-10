@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:torrentchillie/Components/circletorrentcard.dart';
 import 'package:torrentchillie/Components/torrentcard.dart';
 
 class HomePage extends StatefulWidget {
@@ -77,7 +78,10 @@ class _HomePageState extends State<HomePage> {
                 child: SingleChildScrollView(
                   child: Center(
                     child: Column(
-                      children: const <Widget>[TorrentCard()],
+                      children: const <Widget>[
+                        TorrentCard(),
+                        CircleTorrentCard()
+                      ],
                     ),
                   ),
                 ),
