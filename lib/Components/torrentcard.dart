@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:torrentchillie/panels/1337x.dart';
 
 class TorrentCard extends StatelessWidget {
   const TorrentCard({Key? key}) : super(key: key);
@@ -18,16 +19,14 @@ class TorrentCard extends StatelessWidget {
               children: const <Widget>[
                 Expanded(
                   child: Torrentcardbutton(
-                      image:
-                          'https://upload.wikimedia.org/wikipedia/en/9/9b/Kickasstorrentslogo.png',
+                      image: 'lib/assets/torrentcard/Kickasstorrentslogo.png',
                       color: Colors.white,
                       title: 'Kickass Torrent',
                       textColor: Colors.black),
                 ),
                 Expanded(
                   child: Torrentcardbutton(
-                      image:
-                          'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/1337X_logo.svg/1280px-1337X_logo.svg.png',
+                      image: 'lib/assets/torrentcard/2560px-Logo-YTS.svg.png',
                       color: Colors.white,
                       title: '1337x',
                       textColor: Colors.black),
@@ -35,15 +34,14 @@ class TorrentCard extends StatelessWidget {
                 Expanded(
                   child: Torrentcardbutton(
                       image:
-                          'https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/The_Pirate_Bay_logo.svg/800px-The_Pirate_Bay_logo.svg.png',
+                          'lib/assets/torrentcard/800px-The_Pirate_Bay_logo.svg.png',
                       color: Colors.white,
                       title: 'The Pirate Bay',
                       textColor: Colors.black),
                 ),
                 Expanded(
                   child: Torrentcardbutton(
-                      image:
-                          'https://img.icons8.com/color/48/000000/utorrent.png',
+                      image: 'lib/assets/torrentcard/icons8-utorrent-480.png',
                       color: Colors.white,
                       title: 'Torrentz2',
                       textColor: Colors.black),
@@ -51,22 +49,28 @@ class TorrentCard extends StatelessWidget {
               ],
             ),
             Row(
-              children: const <Widget>[
-                Expanded(
+              children: <Widget>[
+                const Expanded(
                   child: Torrentcardbutton(
-                      image:
-                          'https://upload.wikimedia.org/wikipedia/commons/0/0d/RARBG_Logo.png',
+                      image: 'lib/assets/torrentcard/RARBG_Logo.png',
                       color: Colors.white,
                       title: 'RARBG',
                       textColor: Colors.black),
                 ),
                 Expanded(
-                  child: Torrentcardbutton(
-                      image:
-                          'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Logo-YTS.svg/1280px-Logo-YTS.svg.png',
-                      color: Colors.white,
-                      title: 'YTS',
-                      textColor: Colors.black),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => WebViewClass()),
+                      );
+                    },
+                    child: const Torrentcardbutton(
+                        image: 'lib/assets/torrentcard/2560px-Logo-YTS.svg.png',
+                        color: Colors.white,
+                        title: 'YTS',
+                        textColor: Colors.black),
+                  ),
                 ),
               ],
             )
@@ -99,7 +103,7 @@ class Torrentcardbutton extends StatelessWidget {
           color: color, borderRadius: BorderRadius.circular(50.0)),
       child: Column(
         children: <Widget>[
-          Expanded(child: Image(image: NetworkImage(image))),
+          Expanded(child: Image(image: AssetImage(image))),
           Expanded(
             child: Text(
               title,

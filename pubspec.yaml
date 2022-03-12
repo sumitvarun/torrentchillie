@@ -35,6 +35,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   google_fonts: ^2.3.1
+  webview_flutter: ^3.0.1
 
 dev_dependencies:
   flutter_test:
@@ -62,6 +63,12 @@ flutter:
   assets:
     - lib/assets/png/torrentchillie.png
     - lib/assets/png/torrentchillie (1).png
+    - lib/assets/torrentcard/2560px-Logo-YTS.svg.png
+    - lib/assets/torrentcard/RARBG_Logo.png
+    - lib/assets/torrentcard/Kickasstorrentslogo.png
+    - lib/assets/torrentcard/icons8-utorrent-480.png
+    - lib/assets/torrentcard/1280px-1337X_logo.svg.png
+    - lib/assets/torrentcard/800px-The_Pirate_Bay_logo.svg.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
