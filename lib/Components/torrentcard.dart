@@ -16,46 +16,87 @@ class TorrentCard extends StatelessWidget {
         child: Column(
           children: <Widget>[
             Row(
-              children: const <Widget>[
+              children: <Widget>[
                 Expanded(
-                  child: Torrentcardbutton(
-                      image: 'lib/assets/torrentcard/Kickasstorrentslogo.png',
-                      color: Colors.white,
-                      title: 'Kickass Torrent',
-                      textColor: Colors.black),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => WebViewClass()),
+                      );
+                    },
+                    child: const Torrentcardbutton(
+                        image: 'lib/assets/torrentcard/Kickasstorrentslogo.png',
+                        color: Colors.white,
+                        title: 'Kickass Torrent',
+                        textColor: Colors.black),
+                  ),
                 ),
                 Expanded(
-                  child: Torrentcardbutton(
-                      image: 'lib/assets/torrentcard/1280px-1337X_logo.svg.png',
-                      color: Colors.white,
-                      title: '1337x',
-                      textColor: Colors.black),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => WebViewClass()),
+                      );
+                    },
+                    child: const Torrentcardbutton(
+                        image:
+                            'lib/assets/torrentcard/1280px-1337X_logo.svg.png',
+                        color: Colors.white,
+                        title: '1337x',
+                        textColor: Colors.black),
+                  ),
                 ),
                 Expanded(
-                  child: Torrentcardbutton(
-                      image:
-                          'lib/assets/torrentcard/800px-The_Pirate_Bay_logo.svg.png',
-                      color: Colors.white,
-                      title: 'The Pirate Bay',
-                      textColor: Colors.black),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => WebViewClass()),
+                      );
+                    },
+                    child: const Torrentcardbutton(
+                        image:
+                            'lib/assets/torrentcard/800px-The_Pirate_Bay_logo.svg.png',
+                        color: Colors.white,
+                        title: 'The Pirate Bay',
+                        textColor: Colors.black),
+                  ),
                 ),
                 Expanded(
-                  child: Torrentcardbutton(
-                      image: 'lib/assets/torrentcard/icons8-utorrent-480.png',
-                      color: Colors.white,
-                      title: 'Torrentz2',
-                      textColor: Colors.black),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => WebViewClass()),
+                      );
+                    },
+                    child: const Torrentcardbutton(
+                        image: 'lib/assets/torrentcard/icons8-utorrent-480.png',
+                        color: Colors.white,
+                        title: 'Torrentz2',
+                        textColor: Colors.black),
+                  ),
                 ),
               ],
             ),
             Row(
               children: <Widget>[
-                const Expanded(
-                  child: Torrentcardbutton(
-                      image: 'lib/assets/torrentcard/RARBG_Logo.png',
-                      color: Colors.white,
-                      title: 'RARBG',
-                      textColor: Colors.black),
+                Expanded(
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => WebViewClass()),
+                      );
+                    },
+                    child: const Torrentcardbutton(
+                        image: 'lib/assets/torrentcard/RARBG_Logo.png',
+                        color: Colors.white,
+                        title: 'RARBG',
+                        textColor: Colors.black),
+                  ),
                 ),
                 Expanded(
                   child: InkWell(
