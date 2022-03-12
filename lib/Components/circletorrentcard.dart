@@ -16,24 +16,21 @@ class CircleTorrentCard extends StatelessWidget {
                     ccolor: Colors.white,
                     ctextColor: Colors.black,
                     ctitle: 'Top 100',
-                    cimage:
-                        'https://img.icons8.com/color/480/000000/filled-star--v2.gif'),
+                    cimage: 'lib/assets/circlecard/icons8-star-filled.gif'),
               ),
               Expanded(
                 child: Circletorrbutton(
                     ccolor: Colors.white,
                     ctextColor: Colors.black,
                     ctitle: 'Trending',
-                    cimage:
-                        'https://img.icons8.com/color/480/000000/summer--v2.gif'),
+                    cimage: 'lib/assets/circlecard/icons8-summer.gif'),
               ),
               Expanded(
                 child: Circletorrbutton(
                     ccolor: Colors.white,
                     ctextColor: Colors.black,
                     ctitle: 'Movies',
-                    cimage:
-                        'https://img.icons8.com/ultraviolet/480/000000/film-reel--v2.gif'),
+                    cimage: 'lib/assets/circlecard/icons8-film-reel.gif'),
               )
             ],
           ),
@@ -68,7 +65,7 @@ class Circletorrbutton extends StatelessWidget {
           shape: BoxShape.circle),
       child: Column(
         children: <Widget>[
-          Expanded(child: Image(image: NetworkImage(cimage))),
+          Expanded(child: Image(image: AssetImage(cimage))),
           Expanded(
             child: Text(
               ctitle,

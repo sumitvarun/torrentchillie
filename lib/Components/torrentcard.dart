@@ -26,7 +26,7 @@ class TorrentCard extends StatelessWidget {
                 ),
                 Expanded(
                   child: Torrentcardbutton(
-                      image: 'lib/assets/torrentcard/2560px-Logo-YTS.svg.png',
+                      image: 'lib/assets/torrentcard/1280px-1337X_logo.svg.png',
                       color: Colors.white,
                       title: '1337x',
                       textColor: Colors.black),
