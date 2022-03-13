@@ -1,10 +1,16 @@
+import 'dart:async';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:torrentchillie/Components/menu.dart';
+import 'package:torrentchillie/Components/navigation_controls.dart';
+import 'package:torrentchillie/Components/webview_stack.dart';
 import 'package:torrentchillie/screens/homepage.dart';
 import 'package:webview_flutter/webview_flutter.dart';
-import 'dart:async';
+
+import 'dart:io';
 
 class WebViewClass extends StatefulWidget {
   const WebViewClass({Key? key}) : super(key: key);
@@ -14,8 +20,15 @@ class WebViewClass extends StatefulWidget {
 }
 
 class _WebViewClassState extends State<WebViewClass> {
-  final Completer<WebViewController> _controller =
-      Completer<WebViewController>();
+  final controller = Completer<WebViewController>();
+
+  @override
+  void initState() {
+    if (Platform.isAndroid) {
+      WebView.platform = SurfaceAndroidWebView();
+    }
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -27,24 +40,25 @@ class _WebViewClassState extends State<WebViewClass> {
       systemNavigationBarDividerColor: Colors.white,
     )); //Change App Statusbar style :  Status Bar | Bottom Navigation Bar Color | Statusbar text color
     // SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark);
-    return MaterialApp(
-      home: CupertinoPageScaffold(
-          child: NestedScrollView(
+    return CupertinoPageScaffold(
+      child: NestedScrollView(
         headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
           return <Widget>[
             CupertinoSliverNavigationBar(
               leading: CupertinoButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const HomePage()),
-                  );
-                },
-                child: const Icon(
-                  Icons.home_filled,
-                  color: Color(0xff43FE02),
-                ),
-              ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const HomePage()),
+                    );
+                  },
+                  child: Row(
+                    children: <Widget>[
+                      NavigationControls(controller: controller),
+                      Menu(controller: controller),
+                    ],
+                  ) //NavigationControls(controller: controller),
+                  ),
               trailing: CupertinoButton(
                 alignment: Alignment.centerRight,
                 onPressed: () {},
@@ -71,24 +85,8 @@ class _WebViewClassState extends State<WebViewClass> {
             )
           ];
         },
-        body: Material(
-          child: SafeArea(
-              child: SingleChildScrollView(
-            child: Center(
-              child: Column(
-                children: <Widget>[
-                  WebView(
-                    initialUrl: 'https://google.com',
-                    onWebViewCreated: (WebViewController webViewController) {
-                      _controller.complete(webViewController);
-                    },
-                  ),
-                ],
-              ),
-            ),
-          )),
-        ),
-      )),
+        body: WebViewStack(controller: controller),
+      ),
     );
   }
 }
