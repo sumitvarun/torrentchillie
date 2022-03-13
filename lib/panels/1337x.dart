@@ -40,53 +40,17 @@ class _WebViewClassState extends State<WebViewClass> {
       systemNavigationBarDividerColor: Colors.white,
     )); //Change App Statusbar style :  Status Bar | Bottom Navigation Bar Color | Statusbar text color
     // SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark);
-    return CupertinoPageScaffold(
-      child: NestedScrollView(
-        headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
-          return <Widget>[
-            CupertinoSliverNavigationBar(
-              leading: CupertinoButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const HomePage()),
-                    );
-                  },
-                  child: Row(
-                    children: <Widget>[
-                      NavigationControls(controller: controller),
-                      Menu(controller: controller),
-                    ],
-                  ) //NavigationControls(controller: controller),
-                  ),
-              trailing: CupertinoButton(
-                alignment: Alignment.centerRight,
-                onPressed: () {},
-                child: const Icon(
-                  Icons.search,
-                  color: Color(0xff43FE02),
-                ),
-              ),
-
-              //----------------------------------------
-              backgroundColor: Colors.white,
-              largeTitle: Text(
-                'torrentchillie',
-                style: GoogleFonts.sourceSansPro(
-                  color: Colors.black,
-                  fontWeight: FontWeight.w700,
-                  fontSize: 28.0,
-                ),
-              ),
-              //middle: Text(
-              // ' A Covid19 Tracker Application',
-              //style: GoogleFonts.exo2(color: Colors.black),
-              // ),
-            )
-          ];
-        },
-        body: WebViewStack(controller: controller),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Torrentchillie'),
+        // Add from here ...
+        actions: [
+          NavigationControls(controller: controller),
+          Menu(controller: controller),
+        ],
+        // ... to here.
       ),
+      body: WebViewStack(controller: controller),
     );
   }
 }
