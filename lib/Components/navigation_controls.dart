@@ -28,7 +28,10 @@ class NavigationControls extends StatelessWidget {
         return Row(
           children: <Widget>[
             IconButton(
-              icon: const Icon(Icons.arrow_back_ios),
+              icon: const Icon(
+                Icons.arrow_back_ios,
+                color: Color.fromARGB(255, 0, 180, 39),
+              ),
               onPressed: () async {
                 if (await controller.canGoBack()) {
                   await controller.goBack();
@@ -41,7 +44,10 @@ class NavigationControls extends StatelessWidget {
               },
             ),
             IconButton(
-              icon: const Icon(Icons.arrow_forward_ios),
+              icon: const Icon(
+                Icons.arrow_forward_ios,
+                color: Color.fromARGB(255, 0, 180, 39),
+              ),
               onPressed: () async {
                 if (await controller.canGoForward()) {
                   await controller.goForward();
@@ -54,7 +60,10 @@ class NavigationControls extends StatelessWidget {
               },
             ),
             IconButton(
-              icon: const Icon(Icons.replay),
+              icon: const Icon(
+                Icons.replay,
+                color: Color.fromARGB(255, 0, 180, 39),
+              ),
               onPressed: () {
                 controller.reload();
               },

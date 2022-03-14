@@ -87,6 +87,11 @@ class _MenuState extends State<Menu> {
       future: widget.controller.future,
       builder: (context, controller) {
         return PopupMenuButton<_MenuOptions>(
+          icon: const Icon(
+            Icons.menu_open_rounded,
+            color: Color.fromARGB(255, 0, 180, 39),
+            // color: Color(0xff43FE02),
+          ),
           onSelected: (value) async {
             switch (value) {
               case _MenuOptions.navigationDelegate:

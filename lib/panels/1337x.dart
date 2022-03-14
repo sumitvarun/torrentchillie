@@ -42,7 +42,23 @@ class _WebViewClassState extends State<WebViewClass> {
     // SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark);
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Torrentchillie'),
+        leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: const Icon(
+              Icons.arrow_back_ios_new_sharp,
+              color: Color.fromARGB(255, 0, 180, 39),
+            )),
+        backgroundColor: Colors.white,
+        title: const Text(
+          'Torrentchillie',
+          style: TextStyle(
+            //  color: Color.fromARGB(255, 0, 180, 39),
+            color: Colors.black,
+            fontSize: 18.0,
+          ),
+        ),
         // Add from here ...
         actions: [
           NavigationControls(controller: controller),
