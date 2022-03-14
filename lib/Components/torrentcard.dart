@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:torrentchillie/panels/1337x.dart';
+import 'package:torrentchillie/panels/kickasstorrent.dart';
+import 'package:torrentchillie/panels/piratebay.dart';
+import 'package:torrentchillie/panels/rarbg.dart';
+import 'package:torrentchillie/panels/torrentz.dart';
+import 'package:torrentchillie/panels/yts.dart';
 
 class TorrentCard extends StatelessWidget {
   const TorrentCard({Key? key}) : super(key: key);
@@ -22,7 +27,8 @@ class TorrentCard extends StatelessWidget {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => WebViewClass()),
+                        MaterialPageRoute(
+                            builder: (context) => const KickassTorrent()),
                       );
                     },
                     child: const Torrentcardbutton(
@@ -37,7 +43,8 @@ class TorrentCard extends StatelessWidget {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => WebViewClass()),
+                        MaterialPageRoute(
+                            builder: (context) => const WebViewClass()),
                       );
                     },
                     child: const Torrentcardbutton(
@@ -53,7 +60,8 @@ class TorrentCard extends StatelessWidget {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => WebViewClass()),
+                        MaterialPageRoute(
+                            builder: (context) => const PirateBay()),
                       );
                     },
                     child: const Torrentcardbutton(
@@ -69,7 +77,8 @@ class TorrentCard extends StatelessWidget {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => WebViewClass()),
+                        MaterialPageRoute(
+                            builder: (context) => const Torrentz()),
                       );
                     },
                     child: const Torrentcardbutton(
@@ -88,7 +97,7 @@ class TorrentCard extends StatelessWidget {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => WebViewClass()),
+                        MaterialPageRoute(builder: (context) => const RarBg()),
                       );
                     },
                     child: const Torrentcardbutton(
@@ -103,7 +112,7 @@ class TorrentCard extends StatelessWidget {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => WebViewClass()),
+                        MaterialPageRoute(builder: (context) => const Yts()),
                       );
                     },
                     child: const Torrentcardbutton(

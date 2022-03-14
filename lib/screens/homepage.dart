@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:torrentchillie/Components/circletorrentcard.dart';
 import 'package:torrentchillie/Components/torrentcard.dart';
+import 'package:torrentchillie/panels/search.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -49,7 +50,12 @@ class _HomePageState extends State<HomePage> {
                   ),
                   trailing: CupertinoButton(
                     alignment: Alignment.centerRight,
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const Search()),
+                      );
+                    },
                     child: const Icon(
                       Icons.search,
                       color: Color(0xff43FE02),
